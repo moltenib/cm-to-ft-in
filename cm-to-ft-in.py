@@ -4,17 +4,14 @@
 
 from sys import argv
 
-def usage(err_code):
-    print('Usage: {} CM'.format(argv[0]))
-    exit(err_code)
-
 if len(argv) != 2:
-    usage(1)
+    print('Usage: {} CM'.format(argv[0]))
+    exit(1)
 
 try:
     a = int(argv[1])
 except:
-    usage(2)
+    print('0\'0"')
 
 feet = a / 30.48
 inches = a % 30.48 / 2.54
