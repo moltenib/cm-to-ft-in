@@ -10,7 +10,7 @@ EOF
 }
 
 format_() {
-    printf "%d'%1.1f\"\n" $@
+    printf "%d'%1.f\"\n" $@
 }
 
 format_ $(
