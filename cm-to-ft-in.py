@@ -12,6 +12,7 @@ try:
     a = float(argv[1])
 except:
     print('0\'0"')
+    exit(0)
 
 feet = a / 30.48
 inches = a % 30.48 / 2.54
