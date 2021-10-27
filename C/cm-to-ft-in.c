@@ -8,10 +8,10 @@ int main(int argc, char **argv) {
         return 1;
     }
 
-    double a = atof(argv[1]);
+    double cm = atof(argv[1]);
 
-    int feet = trunc(a / 30.48);
-    double inches = trunc(fmod(a, 30.48) / 0.254) / 10;
+    int feet = trunc(cm / 30.48);
+    double inches = trunc(fmod(cm, 30.48) / 0.254) / 10;
 
     printf("%d'%1g\"\n", feet, inches);
 }
