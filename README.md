@@ -1,5 +1,5 @@
 # cm-to-ft-in
-Two scripts, which convert CM to feet and inches.
+Two scripts, which convert centimetres to feet and inches.
 
 Given the same number, the two scripts will print the same result with up-to-one-decimal precision. One is written in Python; the other is made for the Unix shell.
 
