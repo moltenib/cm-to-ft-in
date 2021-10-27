@@ -9,7 +9,7 @@ if len(argv) != 2:
     exit(1)
 
 try:
-    a = int(argv[1])
+    a = float(argv[1])
 except:
     print('0\'0"')
 
