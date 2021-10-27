@@ -7,7 +7,6 @@ The shell script is the fastest.
 
 ```shell
 # Decimal numbers are accepted
-
 Usage: ./cm-to-ft-in.sh CM
        ./cm-to-ft-in.py CM
 ```
