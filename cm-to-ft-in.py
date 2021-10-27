@@ -16,6 +16,7 @@ except:
 feet = a / 30.48
 inches = a % 30.48 / 2.54
 
+# Truncate the number, rather than round it up
 x = str(inches).split('.')
 inches = float(x[0]) + float (x[1][:1]) / 10
 
