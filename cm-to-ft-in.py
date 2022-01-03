@@ -21,4 +21,8 @@ inches = cm % 30.48 / 2.54
 x = str(inches).split('.')
 inches = float(x[0]) + float (x[1][:1]) / 10
 
-print('%d\'%1g"' % (feet, inches))
+if inches:
+    print('%d\'%1g"' % (feet, inches))
+else:
+    print('%d\'' % feet)
+

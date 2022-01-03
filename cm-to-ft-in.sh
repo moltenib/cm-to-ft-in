@@ -10,7 +10,11 @@ EOF
 }
 
 format_() {
-    printf "%d'%1g\"\n" $@
+    if [ $2 > 0 ]; then
+        printf "%d'%1g\"\n" $@
+    else
+        printf "%d'\n" $1
+    fi
 }
 
 format_ $(
