@@ -13,5 +13,8 @@ int main(int argc, char **argv) {
     int feet = trunc(cm / 30.48);
     double inches = trunc(fmod(cm, 30.48) / 0.254) / 10;
 
-    printf("%d'%1g\"\n", feet, inches);
+    if (inches)
+        printf("%d'%1g\"\n", feet, inches);
+    else
+        printf("%d'\n", feet);
 }
