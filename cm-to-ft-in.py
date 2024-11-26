@@ -4,25 +4,26 @@
 
 from sys import argv
 
+def cm_to_feet_inches(cm):
+    feet = int(cm // 30.48)
+    inches = (cm % 30.48) / 2.54
+    inches = int(inches)  # Truncate inches
+    
+    return feet, inches
+
 if len(argv) != 2:
-    print('Usage: {} CM'.format(argv[0]))
+    print(f'Usage: {argv[0]} CM')
     exit(1)
 
 try:
     cm = float(argv[1])
-except:
-    print('0\'0"')
+except ValueError:
+    print("0'0\"")
     exit(0)
 
-feet = int(cm / 30.48)
-inches = cm % 30.48 / 2.54
-
-# Truncate the number, rather than round it up
-x = str(inches).split('.')
-inches = float(x[0]) + float (x[1][:1]) / 10
+feet, inches = cm_to_feet_inches(cm)
 
 if inches:
-    print('%d\'%1g"' % (feet, inches))
+    print(f"{feet}'{inches}\"")
 else:
-    print('%d\'' % feet)
-
+    print(f"{feet}'")
